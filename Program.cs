@@ -1,31 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
 
-class Customer
+namespace GitPract
 {
-    string _firstname;
-    string _lastname;
+    class Program
+    {
+        static void Main(string[]args)
+        {
+            Employee employee = new Employee{Id= 1001, Name= "kalyani", Salary = 99000};
+            Console.WriteLine(employee);
 
-    public Customer(string firstname, string lastname)
-    {
-        _firstname = firstname;
-        _lastname = lastname;
-    }
-
-    public string PrintFullName()
-    {
-        return _firstname + " " + _lastname;
-    }
-
-    ~Customer()
-    {
-        //clean-up code
-    }
-}
-class Program
-{
-    static void Main()
-    {
-        Customer c1 = new Customer("Nazeeruddin", "Shaik");
-        Console.WriteLine(c1.PrintFullName());
-    }
+            List<Employee> employees = new List<Employee>{
+            new Employee{Id = 1002, Name = "Sujana", Salary = 98000.00},
+    new Employee{Id= 1003, Name= "Mounika", Salary = 96000.00}
+    
+};
+foreach(Employee emp in employees)
+Console.WriteLine(emp);
+    }g
 }
